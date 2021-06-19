@@ -31,9 +31,9 @@ if int(sys.version[0]) > 2:
 	xrange = range
 
 # tuple for fast lookup: replace dir to your desired location. 
-fdir = tuple(os.listdir("C:\\Users\\user\\Documents\\GitHub\\leetcode_solution_compare_tool"))
-inp = open("C:\\Users\\user\\Documents\\GitHub\\leetcode_solution_compare_tool\\input.txt", 'r+')
-out = open("C:\\Users\\user\\Documents\\GitHub\\leetcode_solution_compare_tool\\output.txt", 'r+')
+fdir = tuple(os.listdir("C:\\Users\\user\\Documents\\GitHub\\leetspeed"))
+inp = open("C:\\Users\\user\\Documents\\GitHub\\leetspeed\\input.txt", 'r+')
+out = open("C:\\Users\\user\\Documents\\GitHub\\leetspeed\\output.txt", 'r+')
 
 def main():
 	filename = ''
@@ -69,8 +69,9 @@ def main():
 			length = len(keyword_c.findall(line))
 			line = '{} \n'.format(line.strip())
 			out.write('{}{}'.format(spaces*(length - 2), line))
-		fs.close()
-		fsw.close()
+		inp.close()
+		out.close()
+	writeFile()
 	# def makePy():
 	# # make py file (IN-PROGRESS)
 	# if filename not in fdir:
@@ -83,7 +84,5 @@ def main():
 	# 		print("file exists, making {}2.py".format(var))
 	# else:
 	# 	copyfile("C:\\Users\\user\\Documents\\GitHub\\leetcode_solution_compare_tool\\output.txt","C:\\Users\\user\\Documents\\GitHub\\leetcode_solution_compare_tool\\{}".format(filename))
-
-
 if __name__ == "__main__":
 	main()
