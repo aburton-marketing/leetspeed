@@ -5,7 +5,7 @@ Ways you can contribute:
 1. Give feedback
 2. Add features
 3. Report bugs
-4. Update woki and readme
+4. Update wiki and readme
 
 
 
