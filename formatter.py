@@ -21,34 +21,42 @@ if int(sys.version[0]) > 2:
 fdir = tuple(os.listdir("C:\\Users\\user\\Documents\\GitHub\\leetcode_solution_compare_tool"))
 
 def main():
+	# set files as variables
 	fs = fl.inp
 	fsw = fl.out
+	# base = max number of spaces of the first def keyword. Usually set to 4 if the class line is present. 
 	base,res = 0,0
 	filename = ''
 	# returns the number of spaces needed to maintain indentation after lines are stripped
 	def _getspaces(line, base, res):
 		f = rp.spaces_c.findall(line)
+		# w gives us a quantifiyable spacing pattern to follow
 		w = len(f)*2
 		if base == 0:
 			base = max(w,base)
 		elif base != 0:
 			base = min(w,base)
 		s = ''
+		# res retains the indent level by subtracting base
 		res = w - base
 		for i in range(res):
 			s += ' '
 		return [s,base,w,res]
 	for line in fs:
+		# don't write line if class is present
 		if "class" in line:
 			continue
 		else:
+			# if def is already justified set base to 4 (for the other lines)
 			base = 4
 		if "def" in line:
 			line = gp.getparams(line)
 			filename = gp.setName(line)
 		base = _getspaces(line,base,res)[1]
 		lineSpace = _getspaces(line,base,res)[0]
+		# strip gets rid of spaces now that we've saved our original position and have a base
 		line = '{} \n'.format(line.strip())
+		# writes line to the output.txt file
 		fsw.write('{}{}'.format(lineSpace,line))
 	fs.close()
 	fsw.close()
