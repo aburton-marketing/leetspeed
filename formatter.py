@@ -17,7 +17,7 @@ from os.path import isfile, join
 if int(sys.version[0]) > 2:
 	xrange = range
 
-# tuple for fast lookup: to replace dir to your desired location. 
+# tuple for fast lookup: replace dir to your desired location. 
 fdir = tuple(os.listdir("C:\\Users\\user\\Documents\\GitHub\\leetcode_solution_compare_tool"))
 
 def main():
