@@ -9,9 +9,9 @@ from shutil import copyfile
 from os import listdir
 from os.path import isfile, join
 
-# ---- find spaces only
-spaces_p = "[' '][^A-Za-z0-9.()\\{},=<>;:+-]"
-spaces_c = re.compile(spaces_p)
+# # ---- find spaces only
+# spaces_p = "[' '][^A-Za-z0-9.()\\{},=<>;:+-]"
+# spaces_c = re.compile(spaces_p)
 # ---- find variables only
 params_p = r"\b(?!self,|int|str|bool|tuple|List\b)[^\s,{}:\[.*\] -]\w*"
 params_c = re.compile(params_p)
