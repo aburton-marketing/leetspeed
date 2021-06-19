@@ -1,4 +1,4 @@
-🚀 leetcode solution compare tool that downloads leetcode solutions for a given problem and returns a list of completion speeds. 
+🚀 leetspeed dcompares various leetcode solution speeds. 
 
 Ways you can contribute:
 
