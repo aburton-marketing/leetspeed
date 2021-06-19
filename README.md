@@ -1,4 +1,4 @@
-🚀 leetspeed dcompares various leetcode solution speeds. 
+🚀 leetspeed compares various leetcode solution speeds. 
 
 Ways you can contribute:
 
