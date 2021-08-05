@@ -1,42 +1,52 @@
+
+import re
 import os
+import imp
 import sys
 import csv
 import timeit
+import importlib
 import subprocess
-import formatter
-import output
-from shutil import copyfile
 from os import listdir
+from shutil import copyfile
+from formatter import getparams
+from formatter import defname_c
 from os.path import isfile, join
 
 
 # import timeit : done
 # itterate through files :
 # open file : done
-# import file : done
-# copy code :
+# import formatter : done
 # run timeit function on code :
 # get problem number & compile speed :
 # add values to database :
 # close file : done
 
-main_func = None
+def main():
 
-fs = open("C:\\Users\\abasp\\Documents\\github\\leetspeed\\output.py", 'r+')
+    # Default values
+    user_id = None
+    problem_id = None
+    main_func = None
+    speed = None
 
-for line in fs:
-    if 'def' in line:
-        print(line)
+    # Open the output file
+    fs = open("C:\\Users\\abasp\\Documents\\github\\leetspeed\\output.py", 'r+')
 
-# def compare(a=1):
-#     for i in range(a):
-#         pass
+    # Set main_func
+    for line in fs:
+        if 'def' in line:
+            main_func = defname_c.findall(line)[0][:-1]
+            break
 
-# print(timeit.timeit(compare, number=100000))
+    Set speed
+    speed = timeit.timeit(main_func, number=100000)
 
-fs.close()
+    fs.close()
 
-
+if __name__ == "__main__":
+    main()
 
 
 
