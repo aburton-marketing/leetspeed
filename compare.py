@@ -4,7 +4,7 @@ import csv
 import timeit
 import subprocess
 import output
-import formatter
+# import formatter
 from shutil import copyfile
 from os import listdir
 from os.path import isfile, join
