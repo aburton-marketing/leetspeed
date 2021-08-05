@@ -9,6 +9,8 @@ from shutil import copyfile
 from os import listdir
 from os.path import isfile, join
 
+# The formatter formats leetcode solutions ie removing indentations, class definitions, etc. 
+
 # # ---- find spaces only
 # spaces_p = "[' '][^A-Za-z0-9.()\\{},=<>;:+-]"
 # spaces_c = re.compile(spaces_p)
@@ -43,6 +45,7 @@ def main():
 		de = defname_c.findall(f_name)[0][:-1]
 		str1 = str(de) + ".py" 
 		return str1
+	# Gets the params inside parenthesis and deletes the unnecessary content ie string, list, etc
 	def getparams(s):
 		x = params_c.findall((s[s.index("(")+1:s.index(")")]))
 		# print(x)
