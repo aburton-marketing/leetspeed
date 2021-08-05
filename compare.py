@@ -40,7 +40,7 @@ def main():
             main_func = defname_c.findall(line)[0][:-1]
             break
 
-    Set speed
+    # Set speed
     speed = timeit.timeit(main_func, number=100000)
 
     fs.close()
