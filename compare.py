@@ -3,8 +3,8 @@ import sys
 import csv
 import timeit
 import subprocess
+import formatter
 import output
-# import formatter
 from shutil import copyfile
 from os import listdir
 from os.path import isfile, join

@@ -33,9 +33,9 @@ if int(sys.version[0]) > 2:
 	xrange = range
 
 # tuple for fast lookup: replace dir to your desired location. 
-fdir = tuple(os.listdir("C:\\Users\\user\\Documents\\GitHub\\leetspeed"))
-inp = open("C:\\Users\\user\\Documents\\GitHub\\leetspeed\\input.txt", 'r+')
-out = open("C:\\Users\\user\\Documents\\GitHub\\leetspeed\\output.txt", 'r+')
+fdir = tuple(os.listdir("C:\\Users\\abasp\\Documents\\GitHub\\leetspeed"))
+inp = open("C:\\Users\\abasp\\Documents\\GitHub\\leetspeed\\input.txt", 'r+')
+out = open("C:\\Users\\abasp\\Documents\\GitHub\\leetspeed\\output.txt", 'r+')
 
 def main():
 	filename = ''
